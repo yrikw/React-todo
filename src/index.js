@@ -3,14 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-
-const DATA = [
-
-];
-
 ReactDOM.render(
   <React.StrictMode>
-    <App tasks={DATA} />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
