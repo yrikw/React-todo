@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+## React App "To do list"
+![Screenshot](ScreenShot.png)
+
+This app is "To Do List" to organize your daily tasks.
+
+##Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
