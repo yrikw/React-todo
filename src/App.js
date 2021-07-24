@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import Todo from "./components/Todo";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
+import { CSVLink } from "react-csv";
 
 function App(props) {
 
@@ -94,12 +95,23 @@ function App(props) {
     setTasks(editedTaskList);
   }
 
+  const headers = [
+    {label: 'Task', key: 'name' }
+  ]
+
+  const csvReport = {
+    filename: "Report.csv",
+    headers: headers,
+    data: tasks
+  };
+
   return (
     <div className="todoapp stack-large" >
       <h1>To Do List</h1>
       <Form addTask={addTask} />
       {filterList}
       <h2 id="list-heading">{headingText}</h2>
+      <CSVLink {...csvReport} className="button">Export to CSV</CSVLink>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
